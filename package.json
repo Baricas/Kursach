@@ -10,9 +10,21 @@
     "del": "^2.2.0",
     "ejs": "^2.4.1",
     "express": "~4.13.1",
-    "gulp": "git://github.com/gulpjs/gulp#4.0",
     "gulp-less": "^3.0.5",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "mysql": "^2.10.2"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://Baricas:qwerty1234@github.com/Baricas/Kursach.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baricas/Kursach/issues"
+  },
+  "homepage": "https://github.com/Baricas/Kursach#readme",
+  "description": ""
 }
