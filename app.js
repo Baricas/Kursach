@@ -11,7 +11,7 @@ app.use('/book', book_routes);
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', require('ejs-locals'));
-app.set('view engine', 'ejs-locals'); //layout, partials
+app.set('view engine', 'ejs'); //layout, partials
 
 app.get('/', function(req,res) {
     res.render('index.ejs', {});
