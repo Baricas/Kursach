@@ -10,18 +10,16 @@ var book_routes = require('./routes/book_routes');
 app.use('/book', book_routes);
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
+app.engine('ejs', require('ejs-locals'));
 app.set('view engine', 'ejs');
 
 //get all of books
 
 app.get('/', function(req,res) {
-   dao.all(function(err, data) {
-      res.render('index', {
-        books: data  
-      });
-   });
+    // res.end('dev...');
+    res.render('index.ejs', {});
 });
 
 app.listen(8008, function() {
-   console.log('http://localhost:8008/'); 
+   console.log('http://localhost:8008/');
 });

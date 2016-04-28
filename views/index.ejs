@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body>
-<div class="container">
-    <% books.forEach(function(book) { %>
-        <h2>Title: <%= book.title %> <a href="/book/delete/<%= book.id %>">Delete</a></h2>
-        <p>Book id: <%= book.id %></p>
-        <p>Book author: <%= book.author_name %></p>
-        <hr>
-    <% }); %>
-    
-    <form action="/book/save" method="POST">
-        <h2><center>Add new book</center></h2> <br>
-        <input type="text" name="title" placeholder="Book title"> <br>
-        <input type="text" name="author_name" placeholder="Author`s name"> <br>
-        <input type="submit" value="Save">
-    </form>
+<% layout('/layout/main') -%>
+
+<h2>Информация о клиенте:</h2>
+<div class="info">
+    <div class="row">
+        <span>Полное имя:</span>
+        <span>Василий Владимирович Клименко</span>
+    </div>
+    <div class="row">
+        <span>Возраст:</span>
+        <span>21</span>
+    </div>
+    <div class="row">
+        <span>Категория:</span>
+        <span>Студент</span>
+    </div>
+    <div class="row">
+        <span>Номер абонемента:</span>
+        <span>231</span>
+    </div>
+    <div class="row">
+        <span>Количество взятых книг:</span>
+        <span>3</span>
+    </div>
 </div>
-</body>
-</html>
