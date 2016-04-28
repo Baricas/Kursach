@@ -1,0 +1,31 @@
+<% layout('/layout/main') %>
+
+<% users.forEach(function(user) { %>
+
+    <h2>Информация о клиенте:</h2>
+    <div class="info">
+        <div class="row">
+            <span>Полное имя:</span>
+            <span> <%= user.name  %> </span>
+        </div>
+        <div class="row">
+            <span>Возраст:</span>
+            <span> <%= user.age %> </span>
+        </div>
+        <div class="row">
+            <span>Категория:</span>
+            <span> <%= user.category %> </span>
+        </div>
+        <div class="row">
+            <span>Библиотека:</span>
+            <span> <%= user.library  %> </span>
+        </div>
+        <div class="row">
+            <span>Количество взятых книг:</span>
+            <span> <%= user.count %> </span>
+        </div>
+    </div>
+    
+    <br>
+
+<% }); %>

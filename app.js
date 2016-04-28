@@ -5,9 +5,9 @@ var Book = require('./models/book');
 var app = express();
 
 //routes
-var book_routes = require('./routes/book_routes');
+var client_routes = require('./routes/client_routes');
 
-app.use('/book', book_routes);
+app.use('/client', client_routes);
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', require('ejs-locals'));
