@@ -9,6 +9,7 @@
     "body-parser": "~1.13.2",
     "del": "^2.2.0",
     "ejs": "^2.4.1",
+    "ejs-locals": "^1.0.2",
     "express": "~4.13.1",
     "gulp-less": "^3.0.5",
     "gulp-sourcemaps": "^2.0.0-alpha",
