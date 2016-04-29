@@ -1,0 +1,23 @@
+<% layout('/layout/main') %>
+
+<% libs.forEach(function(lib) { %>
+
+    <h2>Информация о библиотеке:</h2>
+    <div class="info">
+        <div class="row">
+            <span>Название:</span>
+            <span> <%= lib.name  %> </span>
+        </div>
+        <div class="row">
+            <span>Количество складов:</span>
+            <span> <%= lib.rep_count %> </span>
+        </div>
+        <div class="row">
+            <span>Количество доступных книг:</span>
+            <span> <%= lib.book_count %> </span>
+        </div>
+    </div>
+
+    <br>
+
+<% }); %>
