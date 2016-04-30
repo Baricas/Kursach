@@ -1,0 +1,39 @@
+<% layout('/layout/main') %>
+
+<h2>Добавить книгу:</h2>
+
+<div class="info">
+    <form action="/book/save" method="POST">
+        <div class="row">
+            <span>Название книги</span>
+            <span></span>
+            <input type="text" name="title" placeholder="Book title">
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <span>Автор книги: </span>
+            <span></span>
+            <input type="text" name="author" placeholder="Author`s name">
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <span>Библиотека:</span>
+            <span></span>
+            <select name="library" id="lib_select">
+                <% libs.forEach(function(lib) { %>
+                    <option value="<%= lib.id %>"><%= lib.name %></option>
+                <% }); %>
+            </select>
+            <div class="clear"></div>
+        </div>
+            <div class="row" id="repository">
+            <span>Склад: </span>
+            <span></span>
+            <select name="repository" id="rep_select"></select>
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Добавить книгу">
+        </div>
+    </form>
+</div>

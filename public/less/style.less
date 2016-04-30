@@ -5,8 +5,7 @@
 /* =====  </globals>  ===== */
 
 
-
-* { margin: 0; padding: 0; box-sizing: border-box;}
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;}
 .container {
     width: 1100px;
     font-family: Verdana, sans-serif;
@@ -100,10 +99,6 @@
 .content {
     padding-top: 50px;
     .nav {
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
         float: left;
         width: 290px;
         background: @dark;
@@ -125,7 +120,9 @@
             font-weight: bold;
             font-family: Open Sans;
         }
+
         .button {
+            color: #fff;
             border-bottom: 1px solid rgba(144, 131, 131, 0.19);
             padding: 10px 30px;
             text-align: left;
@@ -150,11 +147,11 @@
     }
 }
 .info {
-    width: 485px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
     .row {
-        width: inherit;
+        width: 485px;
+        &:first-of-type {
+            margin-top: 30px;
+        }
         span {
             display: inline-block;
             margin-right: 15px;
@@ -169,4 +166,39 @@
 }
 .clear {
     clear: both;
+}
+
+/*  ----------------------------------------------------------  */
+input[type = text],
+select {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 270px;
+    border: 2px solid @dark;
+    border-radius: 5px;
+    padding: 0 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    background: #fff;
+    float: right;
+}
+select[multiple=true] {
+    position: absolute;
+    padding: 10px;
+    width: 150px;
+    border: 2px solid @dark;
+    border-radius: 2px;
+}
+#repository {
+    display: none;
+}
+input[type=submit] {
+    height: 40px;
+    width: inherit;
+    background: @dark;
+    color: #fff;
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    border: 2px solid #eee;
+    border-radius: 5px;
 }

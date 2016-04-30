@@ -5,6 +5,7 @@ var app = express();
 //routes
 app.use('/client', require('./routes/client_routes'));
 app.use('/library', require('./routes/lib_routes'));
+app.use('/book', require('./routes/book_routes'));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
